@@ -2,24 +2,23 @@ import winston, { transports } from "winston";
 import {ENV_CONFIG} from "./config.js";
 
 const customLevelsOptions = {
-    levels: {
-        debug: 4,
-        http: 2,
-        info: 3,
-        warning: 2,
-        fatal: 0,
-        error: 1,
+    levels:{
+      fatal:0,
+      error:1,
+      warn:2,
+      info:3,
+      http:4,
+      debug:5,
     },
-    colors: {
-        debug: 'blue',
-        http: 'blue',
-        info: 'green',
-        warning: 'yellow',
-        fatal: 'red',
-        error: 'red',
+    colors:{
+      fatal: 'red',
+      error: 'red',
+      warn: 'yellow',
+      info: 'blue',
+      http: 'cyan',
+      debug: 'white',
     }
 };
-
 winston.addColors(customLevelsOptions.colors);
 export const devLogger = winston.createLogger({
     levels: customLevelsOptions.levels,

@@ -14,7 +14,7 @@ export const checkSession = (req, res, next) => {
       req.logger.info("Usuario ya autenticado, redirigiendo a /profile");
       res.redirect("/profile");
     } else {
-      req.logger.warning("Usuario no autenticado, procediendo...");
+      req.logger.warn("Usuario no autenticado, procediendo...");
       next();
     }
   };

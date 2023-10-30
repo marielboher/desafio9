@@ -82,7 +82,7 @@ app.use("/", viewsRouter);
 app.use('/email', emailRouter);
 app.use('/sms', smsRouter);
 app.use('/mockingproducts', mockingRouter);
-app.use("/logger", loggerRouter)
+app.use("/loggerTest", loggerRouter)
 
 
 const PM = new ProductManager();
